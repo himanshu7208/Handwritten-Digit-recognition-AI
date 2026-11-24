@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Digit Recognition AI</title>
+
+    <!-- <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}"> -->
+    <link rel="stylesheet" href="static/stylesheet.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">DigitAI</div>
+        <span class="status">AI Model Active</span>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <p class="tagline">POWERED BY LENET-5 CNN</p>
+
+            <h1>Handwritten Digit Recognition</h1>
+
+            <p class="subtitle">
+                Draw any number between 0 and 9.
+                Our AI will recognize it instantly.
+            </p>
+        </section>
+
+        <section class="workspace">
+
+            <div class="drawing-card">
+
+                <h2>Draw Your Digit</h2>
+
+                <p>Use your mouse or finger below.</p>
+
+                <canvas id="drawingCanvas"
+                        width="280"
+                        height="280"></canvas>
+
+                <div class="actions">
+
+                    <button id="clearBtn" class="clear-btn">
+                        Clear
+                    </button>
+
+                    <button id="predictBtn" class="predict-btn">
+                        Predict Digit →
+                    </button>
+
+                </div>
+
+                <p id="message"></p>
+
+            </div>
+
+            <div class="result-card">
+
+                <h2>Recognition Result</h2>
+
+                <div class="result-box">
+
+                    <span>Predicted Digit</span>
+
+                    <div id="digitResult">?</div>
+
+                    <p id="confidence">Draw a digit to begin</p>
+
+                </div>
+
+                <h3>Digit Probabilities</h3>
+
+                <div id="probabilities"></div>
+
+            </div>
+
+        </section>
+
+        <section class="history-card">
+            <h2>Prediction History</h2>
+            <div id="history">
+                No predictions yet.
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        Handwritten Digit Recognition | Python + Flask + CNN
+    </footer>
+
+    <script src="static/script.js"></script>
+
+</body>
+</html>
